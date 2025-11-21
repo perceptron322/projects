@@ -1,0 +1,9 @@
+# MPI executables and build artifacts
+**/a.out
+**/*.o
+
+# Text files
+**/*.txt
+
+# Keep PNG files
+!**/*.png
