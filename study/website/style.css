@@ -1,0 +1,470 @@
+/* ----------- Components */
+
+/* Title */
+.title {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+
+.title h1 {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+}
+
+.title h1::before,
+.title h1::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    /* Длина линии */
+    height: 2px;
+    /* Толщина линии */
+    background-color: black;
+    /* Цвет линии */
+}
+
+.title h1::before {
+    left: 0;
+    transform: translate(-100%, -50%);
+}
+
+.title h1::after {
+    right: 0;
+    transform: translate(100%, -50%);
+}
+
+/* Carousel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel .track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel .item {
+    min-width: 100%;
+}
+
+.carousel img {
+    object-fit: contain;
+    max-height: 100%;
+}
+
+.carousel .button-prev,
+.carousel .button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.carousel .button-prev {
+    left: 10px;
+}
+
+.carousel .button-next {
+    right: 10px;
+}
+
+
+
+/* Main sections */
+
+body {
+    margin: 0;
+    text-align: center;
+    align-items: center;
+}
+
+/* Header */
+header {
+    border-radius: 0px 0px 20px 20px;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+
+header .logo-container {
+    display: block;
+    text-align: center;
+    margin-left: 30px;
+}
+
+header .logo-name {
+    display: inline;
+}
+
+header .logo {
+    display: block;
+    width: 60px;
+    height: auto;
+}
+
+header nav {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+/* About */
+.about {
+    text-align: center;
+    align-items: center;
+}
+
+
+.about p {
+    margin-left: 120px;
+    margin-right: 120px;
+    font-size: 20px;
+}
+
+/* History */
+.history {
+    background-image: url(res/history/history_background.png);
+    text-align: center;
+    align-items: center;
+    color: #00000000;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px 50px;
+    margin: 0 5px;
+    margin-top: 50px;
+
+    transition: color 0.6s ease;
+}
+
+.history:hover {
+    color: white;
+    /* transition: color 0.6s ease; */
+}
+
+.history .title {
+    color: #fff;
+}
+
+.history .title h1::before,
+.history .title h1::after {
+    background-color: white;
+}
+
+/* Materials */
+.materials {
+    margin: 0 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: color 0.6s ease;
+    color: #00000000;
+}
+
+.materials:hover {
+    color: white;
+    transition: color  0.6s ease;
+}
+
+.materials .left-side {
+    background-image: url(res/materials/materials-left.png);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.materials .right-side {
+    flex: 1;
+    background-image: url('res/materials/materials_right.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Popular */
+.popular {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.popular .cards {
+    display: flex;
+    margin-top: 20px;
+}
+
+.popular-card {
+    margin: 0 40px;
+    transition: scale 0.3s ease;
+}
+
+.popular-card:hover {
+    scale: 1.1;
+}
+
+.popular-card:last-child {
+    margin-right: 0;
+}
+
+.popular img {
+    width: 300px;
+    height: auto;
+}
+
+.popular .descr {
+    font-size: 30px;
+    margin-top: 18px;
+    border: 2px solid #000;
+    border-radius: 20px;
+}
+
+.popular-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular .img-holder {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid #000;
+}
+
+/* Catalog */
+.catalog {
+    margin-bottom: 50px;
+}
+
+.catalog-item {
+    margin-top: 20px;
+    display: flex;
+}
+
+.catalog-item img {
+    width: 50%;
+    height: auto;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 4px;
+}
+
+.catalog-title {
+    display: inline;
+}
+
+.catalog-title h2 {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+}
+
+.catalog .descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.catalog .descr p {
+    height: 70%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0 35px;
+}
+
+.catalog .title {
+    margin-bottom: 20px;
+}
+
+/* Workers */
+
+.workers .carousel {
+    border-radius: 20px;
+}
+
+.workers .carousel .item {
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+.workers .carousel .img-holder {
+    object-fit: contain;
+    height: 700px;
+}
+
+.workers .carousel .item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Адаптивный фон */
+.workers .carousel .item .img-holder::before {
+    background-color: black;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: fill;
+    background-image: var(--background-image);
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    opacity: 1;
+    z-index: -1;
+}
+
+/* Затемнение нижней части */
+.workers .carousel .item .img-holder::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(0, 0, 0, 1));
+    pointer-events: none;
+}
+
+/* Call  */
+
+.call {
+    margin-top: 50px;
+}
+
+.call .input-line {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 120px 200px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.call .call-icon {
+    width: 30px;
+    margin: 0 20px;
+}
+
+.call .error-icon {
+    width: 20px;
+    margin-left: -30px;
+    display: none;
+}
+
+.call input {
+    padding: 10px;
+    border: none;
+    background-color: #00000000;
+}
+
+.call input:focus {
+    border: none;
+    outline: none;
+}
+
+.call button {
+    margin: 0 30px;
+    background-color: black;
+    color: white;
+    padding: 7px;
+}
+
+.notification {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.call-highlight {
+    animation: highlight 1s ease-out;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: rgb(0, 176, 68);
+    }
+}
+
+/* Footer */
+
+footer {
+    border-radius: 20px 20px 0px 0px;
+    margin-top: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-first-text {
+    margin-bottom: 30px;
+}
+
+.footer-second-text {
+    margin-top: 30px;
+}
+
+footer a {
+    background-color: #333;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer a:hover {
+    color: #000;
+    background-color: #fff;
+}
