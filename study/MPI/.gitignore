@@ -2,6 +2,12 @@
 **/a.out
 **/*.o
 
+# Executables without extension (compiled binaries)
+*
+!*/
+!*.*
+
+
 # Text files
 **/*.txt
 
