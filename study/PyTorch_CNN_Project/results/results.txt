@@ -1,0 +1,104 @@
+
+[Gloo] Rank 0 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 1 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 2 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+[Gloo] Rank 3 is connected to 3 peer ranks. Expected number of connected peer ranks is : 3
+Process 0/4 started
+
+==================================================
+Starting training...
+==================================================
+Process 1/4 started
+Process 2/4 started
+Process 3/4 started
+Rank 0, Epoch 0, Batch 0, Loss: 2.3447
+Rank 0, Epoch 0, Batch 100, Loss: 0.2743
+Rank 0, Epoch 0, Batch 200, Loss: 0.0777
+Epoch 0 finished, Avg Loss: 0.3334
+Rank 0, Epoch 1, Batch 0, Loss: 0.0885
+Rank 0, Epoch 1, Batch 100, Loss: 0.0342
+Rank 0, Epoch 1, Batch 200, Loss: 0.1109
+Epoch 1 finished, Avg Loss: 0.1082
+Rank 0, Epoch 2, Batch 0, Loss: 0.0384
+Rank 0, Epoch 2, Batch 100, Loss: 0.0293
+Rank 0, Epoch 2, Batch 200, Loss: 0.0477
+Epoch 2 finished, Avg Loss: 0.0853
+Rank 0, Epoch 3, Batch 0, Loss: 0.1890
+Rank 0, Epoch 3, Batch 100, Loss: 0.0428
+Rank 0, Epoch 3, Batch 200, Loss: 0.0420
+Epoch 3 finished, Avg Loss: 0.0676
+Rank 0, Epoch 4, Batch 0, Loss: 0.0597
+Rank 0, Epoch 4, Batch 100, Loss: 0.0458
+Rank 0, Epoch 4, Batch 200, Loss: 0.0886
+Epoch 4 finished, Avg Loss: 0.0545
+
+==================================================
+Training completed in 160.63 seconds (2.68 minutes)
+==================================================
+
+==================================================
+Starting testing...
+==================================================
+
+Test Results:
+  Average Loss: 0.0292
+  Accuracy: 98.95% (9895/10000)
+Process 0 finished
+Process 1 finished
+Process 2 finished
+Process 3 finished
+
+
+Test Results:
+  Average Loss: 0.0317
+  Accuracy: 99.11% (9911/10000)
+
+
+
+=== node: 1,  nprocs_per_node : 4, cpus_per_task : 2 ===
+Training completed in 160.63 seconds (2.68 minutes)
+========================================================
+speedup = 3.23
+
+=== node: 1,  nprocs_per_node : 8, cpus_per_task : 2 ===
+Training completed in 85.02 seconds (1.42 minutes)
+========================================================
+speedup = 6.11
+
+=== node: 1,  nprocs_per_node : 16, cpus_per_task : 2 ===
+Training completed in 55.32 seconds (0.92 minutes)
+========================================================
+speedup = 9.38
+
+=== node: 1,  nprocs_per_node : 32, cpus_per_task : 2 ===
+Training completed in 31.74 seconds (0.53 minutes)
+========================================================
+speedup = 16.36
+
+
+
+=== node: 2,  nprocs_per_node : 4, cpus_per_task : 2 ===
+Training completed in 89.14 seconds (1.49 minutes)
+========================================================
+speedup = 5.83
+
+=== node: 2,  nprocs_per_node : 8, cpus_per_task : 2 ===
+Training completed in 89.14 seconds (1.49 minutes)
+========================================================
+speedup = 5.83
+
+=== node: 2,  nprocs_per_node : 16, cpus_per_task : 2 ===
+Training completed in 38.47 seconds (0.64 minutes)
+========================================================
+speedup = 13.5
+
+=== node: 2,  nprocs_per_node : 32, cpus_per_task : 2 ===
+Training completed in 26.62 seconds (0.44 minutes)
+========================================================
+speedup = 19.5
+
+
+
+=== node: 1,  nprocs_per_node : 1, cpus_per_task : 2 ===
+Training completed in 519.28 seconds (8.65 minutes)
+========================================================
